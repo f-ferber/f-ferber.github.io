@@ -11,54 +11,39 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.Sc. in Data Science, University of Salzburg, 2024 (expected)
+* B.Sc. in Mathematics, University of Marburg, 2020
+* B.Sc. in Mechanical Engineering, University of Magdeburg, 2017
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Lab for Intelligent Data Analytics: Research Assistant
+  * 2024-02 ongoing
+  * Project: Statistical corroboration of a panel study on consumer data
+  * Technologies: Python, pyTorch, R, R Shiny, ggplot
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Red Bull: Working student
+  * 2022-11 to 2024-01
+  * Projects: Clustering of certain subgraphs of Red Bull’s configuration management database (CMDB); Predicting cost overruns for IT projects; Other smaller projects
+  * Technologies: R, pyTorch, R Shiny, keras, ggplot, git
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+* University of Salzburg: Research Assistant
+  * 2021-05 to 2022-05
+  * Project: Classifying sleep stages from electrocardiographic signals
+  * Technologies: R, Python, tidymodels, singularity, git
+
+* B&R Industrial Automation: Intern
+  * 2021-07 to 2021-08
+  * Project: Development of a scheduling strategy to increase the throughput at the switches of an industrial transport system
+  * Technologies: Python, OpenAI Gym, stable-baselines
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* R
+* Python
+* PyTorch
+* scikit-learn, tidymodels
+* ggplot, seaborn
+* SQL
+* Rust, Scala, MATLAB
+* Linux, vim, git, docker
