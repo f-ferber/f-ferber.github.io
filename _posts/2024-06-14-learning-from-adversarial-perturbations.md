@@ -6,9 +6,11 @@ tags:
   - machine learning theory
 ---
 
+A binary classifier trained on adversarially perturbed training samples can sometimes still generalize well on unseen test data, despite the fact that all training samples have a wrong label. This blog post summarizes a paper/preprint that gives a theoretical justification of this observed behaviour.
+
 This is a high-level summary of the paper
 
-Kumano, Soichiro, Hiroshi Kera, and Toshihiko Yamasaki. **"Theoretical Understanding of Learning from Adversarial Perturbations."** arXiv preprint arXiv:2402.10470 (2024).
+Kumano, Soichiro, Hiroshi Kera, and Toshihiko Yamasaki. **"Theoretical Understanding of Learning from Adversarial Perturbations."** arXiv preprint [arXiv:2402.10470](https://arxiv.org/abs/2402.10470) (2024).
 
 ## What is this about?
 Given a dataset, a binary classifier is trained. Then, an adversary perturbs (i.e., adds random noise to) every datapoint in a way such that the classifier would return the wrong label, thus generating a new dataset. Another classifier is trained from scratch on the perturbed and mislabeled dataset. It turns out that the second classifier can still generalize on the original, unperturbed test set. One hypothesis for this behavior is that the perturbation, although looking incomprehensible to humans, still has to contain some kind of label-data in order to fool the first classifier.
