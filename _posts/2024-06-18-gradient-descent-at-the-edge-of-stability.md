@@ -31,13 +31,13 @@ For a smooth mapping \\( f: \mathbb{R}^{d_\theta} \to \mathbb{R}^{d_\theta} \\),
 
 Using this definition, one can partition the set of fixed points of the gradient descent map \\( G \\) (that is, the set of critical points of the loss landscape) into stable and weakly stable critical points.
 
-Denote by \\( M \\) the set of minimizers for the linear neural network, which can be shown to be a manifold. For every step size \\( \eta \\), the strong stable sub-manifold is defined as \\( M_{\text{SS}} := \left\\{ \theta \in M \; \left| \; \lambda_\text{max}(H(\theta)) < \frac{2}{\eta} \right. \right\\} \\), where \\( \lambda_\text{max}(H(\theta)) \\) denotes the maximal eigenvalue of the Hessian of \\( G \\) at \\( \theta \\). Let \\( S(G) := \left\\{ \left. \theta \in \mathbb{R}^{d_\theta} \; \right| \; \det(\text{d}G(\theta)) = 0 \right\\} \\) be the set of singularities of \\( G \\).
+Denote by \\( M \\) the set of minimizers for the linear neural network, which can be shown to be a manifold. For every step size \\( \eta \\), the strong stable sub-manifold is defined as \\( M_{\text{SS}} := \left\\{ \theta \in M \; \left\lvert \; \lambda_\text{max}(H(\theta)) < \frac{2}{\eta} \right. \right\\} \\), where \\( \lambda_\text{max}(H(\theta)) \\) denotes the maximal eigenvalue of the Hessian of \\( G \\) at \\( \theta \\). Let \\( S(G) := \left\\{ \left. \theta \in \mathbb{R}^{d_\theta} \; \right\rvert \; \det(\text{d}G(\theta)) = 0 \right\\} \\) be the set of singularities of \\( G \\).
 
 From the definition of \\( G \\), we can see that its total derivative is given by \\( \text{d}G(\theta) = I - \eta H(\theta) \\), where \\( H \\) is the Hessian of \\( G \\). If the step size \\( \eta \\) is smaller than the largest eigenvalue of the Hessian along the optimization trajectory, then \\( \text{d}G \\) has an eigenvalue less than one, meaning that \\( G \\) is contractive and thus gradient descent is guaranteed to converge.
 
 Hence, it is not surprising that all points in \\( M_\text{SS} \setminus S(G) \\) are Lyapunov stable, while every other point in \\( M \\) is unstable.
 
-Let \\( \lamba_i: M \to \mathbb R \\) be the function that maps any minimizer \\( \theta \in M \\) to the \\( i \\)-th non-zero eigenvalue of the Hessian \\( H_L(\theta) \\) of the loss function \\( L \\) at \\( \theta \\). The authors show the important technical result that \\( \lambda_i \\) is a _proper function_ for every \\( i \\), i.e. that for any compact set \\( K \subseteq \mathbb R \\) its preimage \\( \lambda_i^{-1}(K) \substeq M \\) is also compact.
+Let \\( \lambda_i: M \to \mathbb R \\) be the function that maps any minimizer \\( \theta \in M \\) to the \\( i \\)-th non-zero eigenvalue of the Hessian \\( H_L(\theta) \\) of the loss function \\( L \\) at \\( \theta \\). The authors show the important technical result that \\( \lambda_i \\) is a _proper function_ for every \\( i \\), i.e. that for any compact set \\( K \subseteq \mathbb R \\) its preimage \\( \lambda_i^{-1}(K) \subseteq M \\) is also compact.
 
 As a consequence, ther exists an \\( \eta > 0 \\) such that \\( \lambda_i^{-1} \\left( \\left[ 0, \frac{1}{\eta} \\right] \\right) = \emptyset \\) for every non-zero \\( i \\)-th eigenvalue of the Hessian of \\( L \\).
 
@@ -51,7 +51,7 @@ As a consequence, for \\( \eta > \eta_C \\), convergence is possible, but guaran
 
 ## Proof idea for the second result?
 
-Define \\( M_{\text{WS}} := \left\\{ \theta \in M \; \left| \; \lambda_\text{min}(H(\theta)) < 2\eta \right. \right\\} \\) as the submanifold of _weakly stable_ minimizers. With a similar argument as before, there exists a critical step size \\( \eta_E \\) such that \\( M_\text{WS} \neq \emptyset \\).
+Define \\( M_{\text{WS}} := \left\\{ \theta \in M \; \left\lvert \; \lambda_\text{min}(H(\theta)) < 2\eta \right. \right\\} \\) as the submanifold of _weakly stable_ minimizers. With a similar argument as before, there exists a critical step size \\( \eta_E \\) such that \\( M_\text{WS} \neq \emptyset \\).
 
 But now the authors show that \\( C \\) has measure zero. Because \\( G \\) is non-singular, the set of initial weights that converge has measure zero, i.e. convergence is almost surely impossible.
 
